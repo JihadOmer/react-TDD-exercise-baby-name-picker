@@ -26,5 +26,11 @@ describe('App', () => {
       expect(screen.getByTestId('company-name').tagName).toBe('H3')
       expect(screen.getByTestId('company-name').textContent).toBe('Our Future...')
     });
+  });
+  describe('main', () => {
+    it('should render the main',()=>{
+      render(<App />)
+      expect(screen.getByRole('main')).toBeVisible()
+    })
   })
 });
